@@ -139,7 +139,7 @@ def forecast_next_5_years(timeline_df):
 year_columns = [int(col) for col in df.columns if col.isdigit()]
 min_year, max_year = min(year_columns), max(year_columns)
 
-st.sidebar.header("🗺️ Green Navigation")
+st.sidebar.header("Green Navigation")
 page = st.sidebar.radio(
     "Go To:", 
     [
@@ -172,7 +172,7 @@ co2_defor = get_indicator_timeline("Carbon dioxide (CO2) net fluxes from LULUCF 
 # PAGE 1: ENVIRONMENTAL VITAL SIGNS
 # ==========================================
 if page == "1. Environmental Vital Signs":
-    st.title("🌍 Environmental Vital Signs: Kenya's Green Footprint")
+    st.title("Environmental Vital Signs: Kenya's Green Footprint")
     st.markdown("A macro evaluation of Kenya's structural landscape markers and green asset baseline values.")
     st.markdown("---")
     
@@ -206,7 +206,7 @@ if page == "1. Environmental Vital Signs":
     with col_r:
         st.markdown("""
         <div class="translator-note">
-            💡 This overview gauges where Kenya gets its everyday electric energy from.<br><br>
+            This overview gauges where Kenya gets its everyday electric energy from.<br><br>
             When the <strong>blue line (hydro)</strong> dips, it is usually a sign of severe droughts drying out river reservoirs. When it dips, the country historically had to fire up the <strong>red line (oil generators)</strong>, which makes electricity both more expensive and more polluting.
         </div>
         """, unsafe_allow_html=True)
@@ -215,7 +215,7 @@ if page == "1. Environmental Vital Signs":
 # PAGE 2: THE POWER GRID MIX
 # ==========================================
 elif page == "2. The Power Grid Mix":
-    st.title("⚡ The Power Grid: Moving Away From Dirty Fuel")
+    st.title("The Power Grid: Moving Away From Dirty Fuel")
     st.markdown("A deep-dive review of structural transitions across Kenya's electricity production sectors.")
     st.markdown("---")
     
@@ -230,7 +230,7 @@ elif page == "2. The Power Grid Mix":
     
     st.markdown("""
     <div class="translator-note">
-       💡 Think of this stacked bar chart as a visual recipe of Kenya's electricity. The <strong>blue section</strong> is clean energy from rain and rivers, while the <strong>grey section</strong> is fossil fuel. Over the decades, you can look for moments where the grey bars shrink—this indicates Kenya successfully bringing non-fossil alternative grids (like massive geothermal wells) online!
+       Think of this stacked bar chart as a visual recipe of Kenya's electricity. The <strong>blue section</strong> is clean energy from rain and rivers, while the <strong>grey section</strong> is fossil fuel. Over the decades, you can look for moments where the grey bars shrink—this indicates Kenya successfully bringing non-fossil alternative grids (like massive geothermal wells) online!
     </div>
     """, unsafe_allow_html=True)
 
@@ -238,7 +238,7 @@ elif page == "2. The Power Grid Mix":
 # PAGE 3: CARBON EMISSIONS & FORESTS
 # ==========================================
 elif page == "3. Carbon Emissions & Forests":
-    st.title("🏭 Sector Emissions & Natural Carbon Storage Sinks")
+    st.title("Sector Emissions & Natural Carbon Storage Sinks")
     st.markdown("Evaluating where carbon dioxide emissions are generated across the economy, vs the state of our forest buffers.")
     st.markdown("---")
     
@@ -257,7 +257,7 @@ elif page == "3. Carbon Emissions & Forests":
         
         st.markdown("""
         <div class="translator-note">
-            💡 Not all pollution comes from cars and factories. In Kenya, a huge portion of emissions tracks back to <strong>Farming/Livestock (yellow line)</strong> and <strong>Forest Clearing (brown line)</strong>. This chart highlights exactly which sectors need modern green solutions the most.
+            Not all pollution comes from cars and factories. In Kenya, a huge portion of emissions tracks back to <strong>Building & Urban Power (red line)</strong> and <strong>Forest Clearing (brown line)</strong>. This chart highlights exactly which sectors need modern green solutions the most.
         </div>
         """, unsafe_allow_html=True)
         
@@ -295,7 +295,7 @@ elif page == "3. Carbon Emissions & Forests":
             
         st.markdown("""
         <div class="translator-note">
-            💡 Forests act as the planet's lungs, sucking up dirty carbon dioxide emissions directly out of the air. This <strong>green grid area</strong> tracks Kenya's forest canopy cover over time. If this line slants downward, it means we are losing our best natural shield against climate change.
+            Forests act as the planet's lungs, sucking up dirty carbon dioxide emissions directly out of the air. This <strong>green grid area</strong> tracks Kenya's forest canopy cover over time. Line slanting downward means we are losing our best natural shield against climate change.
         </div>
         """, unsafe_allow_html=True)
 
@@ -303,7 +303,7 @@ elif page == "3. Carbon Emissions & Forests":
 # PAGE 4: FUTURE GREEN HORIZONS
 # ==========================================
 elif page == "4. Future Green Horizons":
-    st.title("🔮 Future Green Horizons: 5-Year Environmental Trends")
+    st.title("Future Green Horizons: 5-Year Environmental Trends")
     st.markdown("Projecting baseline asset trends over a rolling 5-year statistical matrix based on historical velocities.")
     st.markdown("---")
     
@@ -340,12 +340,12 @@ elif page == "4. Future Green Horizons":
         with col_t:
             st.markdown("""
             <div class="forecast-note">
-                <strong>📋 Statistical Forecasting Rule Box:</strong><br>
+                <strong>Statistical Forecasting Rule Box:</strong><br>
                 This trend line captures modern momentum from the last 15 recorded points to extend a projection arrow out towards 2030. It evaluates what our world will look like if policies and tree-planting initiatives stay at current speeds.
             </div>
             """, unsafe_allow_html=True)
             
-            st.markdown("### 📊 Projected Green Table Matrix")
+            st.markdown("### Projected Green Table Matrix")
             df_disp = fc_df.copy()
             df_disp['Projected Value'] = df_disp['Projected Value'].apply(lambda x: f"{x:.2f}%")
             st.table(df_disp.reset_index().rename(columns={'index': 'Year'}))
