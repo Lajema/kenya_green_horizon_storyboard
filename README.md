@@ -48,7 +48,6 @@ During development, narrow chronological filter ranges (e.g., viewing a single m
 👉 **Live Dashboard:** [https://your-streamlit-app-url.streamlit.app](https://lajema-kenya-green-horizon-storyboard-green-app-vfvbuf.streamlit.app/)
 
 ---
-
 ## 🚀 Technical Requirements & Execution
 
 ### 1. Data File Configuration
