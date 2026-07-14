@@ -43,6 +43,11 @@ During development, narrow chronological filter ranges (e.g., viewing a single m
 3.  **Strict Metric Formatting:** Enforced fixed decimal notation rules (`tickformat=".1f"`) to trim long decimal numbers into readable, clean single-decimal values (e.g., `6.3%`).
 
 ---
+## 🌐 Live Demo
+
+👉 **Live Dashboard:** [https://your-streamlit-app-url.streamlit.app](https://lajema-kenya-green-horizon-storyboard-green-app-vfvbuf.streamlit.app/)
+
+---
 
 ## 🚀 Technical Requirements & Execution
 
